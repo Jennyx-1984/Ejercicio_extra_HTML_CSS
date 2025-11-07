@@ -17,6 +17,7 @@ header{
     width: 100%;          
     background: white;
     text-align: center;
+    z-index: 100;
 }
 
 nav{
@@ -33,7 +34,7 @@ display: flex;
     display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-gap:20px;
+gap:30px;
 justify-content: center;
 align-items: center;
 font-weight: bold;
@@ -64,13 +65,16 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.flechita-abajo{
-opacity:0;
-transition: opacity 0.3s ease, color 0.3s ease;
-    color: hotpink; 
-    font-size: 13px;
+.flechita-abajo {
+  width: 13px;
+  transition: filter 0.3s ease;
+  filter: brightness(0) invert(0); /* imagen original negra */
 }
 
+/* Cuando el li se hace hover, la imagen cambia a rosa */
+#opcion4:hover .flechita-abajo {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(92%) saturate(4270%) hue-rotate(305deg) brightness(102%) contrast(101%); /*la flecha se vuelve rosita*/
+}
 
 
 #menu{
@@ -255,10 +259,11 @@ li.activo .flechita-abajo {
   display: flex;
   width: 80%;
   gap: 100px;
-  margin: 200px auto;
+  margin: 200px auto 0 auto; 
   z-index: 1;
   padding-top: 150px;
   padding-bottom: 150px;
+  z-index: 1;
 }
 
 .articulo-dos::before {
@@ -267,12 +272,11 @@ li.activo .flechita-abajo {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw; /* ocupa todo el ancho de la ventana */
+  width: 100vw;
   height: 100%;
   background-color: aliceblue;
-  z-index: -1; /* queda detrás del contenido */
+  z-index: -1;
 }
-
 .botones-articulo{
     display: flex;
     flex-wrap: wrap;
@@ -358,3 +362,102 @@ content: "";
     border: 5px solid black;
 }
 
+
+.articulo-tres{
+    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 100px;
+  margin: 0 auto 200px auto; 
+  z-index: 1;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  z-index: 1;
+
+}
+
+.articulo-tres::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; 
+  height: 100%;
+  /*background-color: #FAFDFF;*/
+  background-color:#f6f9fd;
+  z-index: -1; 
+}
+
+.fila1,.fila2{
+    width: 95%;
+    display: flex;
+    gap: 50px;
+}
+.card{
+    width: 30%;
+    
+}
+
+.estrellas img{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.barra{
+    content: "";
+    width: 30px;
+    border-bottom:1px solid gray;
+    margin: 2px auto 10px auto;
+
+}
+
+blockquote{
+    text-align: center;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+cite{
+    display:block;
+    text-align: center;
+    font-weight: bold ;
+    margin: 10px auto;
+}
+
+
+.empresas{
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 50px 100px 50px 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    order:2;
+
+
+}
+
+.articulo-tres > .subtitulo{
+    text-align: center;
+}
+
+
+section{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.fila1{
+    order:1;
+}
+
+.fila2{
+    order:3;
+}
