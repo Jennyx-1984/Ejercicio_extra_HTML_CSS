@@ -48,7 +48,16 @@ background:none;
 border:none;
 cursor: pointer;
 }
+.boton-apple img{
+    width: 10%;
+    filter: invert(1);
+}
 
+.boton-google img{
+    width: 10%;
+    filter: invert(1);
+
+}
 .descargas{
     border:5px hotpink solid;
     border-radius: 20px;
@@ -59,6 +68,8 @@ cursor: pointer;
     font-weight: bold;
     align-self: center;
 }
+
+
 
 .navegador li:hover{
     color:hsl(323, 96%, 45%);
@@ -127,7 +138,7 @@ main{
 }
 
 h1{
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -150,11 +161,13 @@ h1{
     margin:0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap:10px;
     margin-top: 20px;
+    text-align: center;
 }
 
-.boton-apple,.boton-android,.lightbox{
+.boton-apple,.boton-google,.lightbox{
     background-color: hotpink;
     border-radius: 25px;
     color:white;
@@ -162,7 +175,10 @@ h1{
     height: 50px;
     font-size: 14px;
     font-weight: bold;
-    align-self: center;
+    gap:2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blue-circle{
