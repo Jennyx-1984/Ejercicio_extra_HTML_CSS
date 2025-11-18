@@ -647,11 +647,13 @@ section{
     width: 100%;
     padding-top: 150px;
     padding-bottom: 150px;
+    z-index: -5;
+    position: relative;
 }
 
 
 .iphone{
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     
 }
@@ -667,18 +669,31 @@ section{
 .decoracion2{
     width: 4%;
     position: relative;
-    bottom:200px;
-    right:300px;
+    bottom:150px;
+    right:100px;
 }
 
 .decoracion3{
     width: 2%;
     position: relative;
     top:100px;
-    right: 80%;
+    right: 89%;
 }
 
+.semi-circulo{
+    width: 30%;
+    position:absolute;
+    z-index: -4;
+}
 
+.izquierda{
+    right:90%
+}
+
+.derecha{
+    top: 10%;
+    left: 90%;
+}
 .centrada{
     width: 63%;
     text-align: center;
